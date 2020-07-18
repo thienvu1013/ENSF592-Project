@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Calgary Traffic</title>
+        
+        <!--Leaflet.css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--Leaflet.js-->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+        <!--jQuery-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <!--Controls-->
+        <div id="controls">
+            <h2>Calgary Traffic</h2>
+            
+            <label for="type" class="select">Type:</label>
+            <select id="type" class="select">
+                Select Type:
+                <option value="volume">Traffic Volume</option>
+                <option value="accident">Accidents</option>
+            </select>
+            
+            <label for="year" class="select">Year:</label>
+            <select id="year" class="select">
+                Select Year:
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+            </select>
+            
+            <button id="readbtn" class="btn">Read</button>
+            
+            <button id="analyzebtn" class="btn">Analyze</button>
+            
+            <button id="mapbtn" class="btn">Map</button>
+            
+            <label for="status" class="select">Status:</label>
+            <input type="text" id="status" disabled>
+        </div>
+        
+        <!--Read-->
+        <div id="read">
+        <h3>Showing table here</h3>
+        </div>
+        
+        <!--Analyze-->
+        <div id="analyze">
+        <h3>Analysis - Showing graph here</h3>
+        </div>
+        
+        <!--Map-->
+        <div id="map"></div>
+        <script type="text/javascript" src="map.js"></script>
+    </body>
+</html>
